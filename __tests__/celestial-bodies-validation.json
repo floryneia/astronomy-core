@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "generated": "2026-07-31",
+    "reference": "Swiss Ephemeris 2.10.03 (pyswisseph), swe.calc_ut geocentric ecliptic tropical",
+    "implementation": "astronomy-engine v2.1.19, GeoVector → Ecliptic().elon / elat",
+    "coordinate_system": "geocentric ecliptic, tropical (no ayanamsa), J2000.0",
+    "bug_fixed": "atan2(gv.y, gv.x) gives equatorial RA, not ecliptic longitude. Fixed to Astronomy.Ecliptic(gv).elon.",
+    "tolerance": {
+      "inner_planets_deg": 0.005,
+      "outer_planets_deg": 0.006,
+      "note": "Neptune max measured 0.00497° — slightly wider tolerance for slow outer bodies"
+    }
+  },
+  "statistics": {
+    "bodies": ["Sun", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"],
+    "n_dates": 8,
+    "Sun":     { "mean_error_deg": 0.000168, "max_error_deg": 0.000202 },
+    "Moon":    { "mean_error_deg": 0.000257, "max_error_deg": 0.000639 },
+    "Mercury": { "mean_error_deg": 0.000735, "max_error_deg": 0.001758 },
+    "Venus":   { "mean_error_deg": 0.000660, "max_error_deg": 0.001872 },
+    "Mars":    { "mean_error_deg": 0.000422, "max_error_deg": 0.000749 },
+    "Jupiter": { "mean_error_deg": 0.000858, "max_error_deg": 0.002146 },
+    "Saturn":  { "mean_error_deg": 0.000643, "max_error_deg": 0.001703 },
+    "Uranus":  { "mean_error_deg": 0.001173, "max_error_deg": 0.003095 },
+    "Neptune": { "mean_error_deg": 0.003179, "max_error_deg": 0.004966 },
+    "Pluto":   { "mean_error_deg": 0.000234, "max_error_deg": 0.000689 },
+    "all_pass": true
+  },
+  "before_fix": {
+    "description": "atan2(gv.y, gv.x) on equatorial vector — variable error due to obliquity projection",
+    "Sun":     { "mean_error_deg": 1.108, "max_error_deg": 1.839 },
+    "Moon":    { "mean_error_deg": 1.560, "max_error_deg": 3.214 },
+    "Mercury": { "mean_error_deg": 0.836, "max_error_deg": 2.376 },
+    "Venus":   { "mean_error_deg": 1.759, "max_error_deg": 3.106 },
+    "Mars":    { "mean_error_deg": 1.903, "max_error_deg": 2.797 },
+    "Jupiter": { "mean_error_deg": 1.262, "max_error_deg": 2.490 },
+    "Saturn":  { "mean_error_deg": 1.595, "max_error_deg": 2.009 }
+  },
+  "fixtures": {
+    "1990-03-20T12:00:00Z": { "Sun": 359.6141, "Moon": 279.7049, "Mercury": 0.9884,   "Venus": 313.5569, "Mars": 306.5519, "Jupiter": 91.7159,  "Saturn": 293.6991, "Uranus": 279.3341, "Neptune": 284.3737, "Pluto": 227.5433 },
+    "1995-07-04T12:00:00Z": { "Sun": 102.0600, "Moon": 175.6938, "Mercury": 80.9565,  "Venus": 89.0501,  "Mars": 170.3071, "Jupiter": 246.8002, "Saturn": 354.7493, "Uranus": 299.1720, "Neptune": 294.5027, "Pluto": 238.1418 },
+    "2000-01-01T12:00:00Z": { "Sun": 280.3689, "Moon": 223.3238, "Mercury": 271.8893, "Venus": 241.5658, "Mars": 327.9633, "Jupiter": 25.2530,  "Saturn": 40.3956,  "Uranus": 314.8092, "Neptune": 303.1930, "Pluto": 251.4547 },
+    "2005-06-21T12:00:00Z": { "Sun": 90.2079,  "Moon": 260.7718, "Mercury": 109.4521, "Venus": 111.7980, "Mars": 6.4804,   "Jupiter": 189.3206, "Saturn": 116.8605, "Uranus": 340.7476, "Neptune": 317.3312, "Pluto": 262.9853 },
+    "2010-09-01T12:00:00Z": { "Sun": 158.9518, "Moon": 66.2648,  "Mercury": 162.8411, "Venus": 204.2058, "Mars": 201.1339, "Jupiter": 0.9298,   "Saturn": 184.1765, "Uranus": 359.3953, "Neptune": 326.9713, "Pluto": 272.8314 },
+    "2015-01-15T12:00:00Z": { "Sun": 295.0039, "Moon": 229.0672, "Mercury": 313.8863, "Venus": 314.8680, "Mars": 332.4020, "Jupiter": 140.4180, "Saturn": 242.2331, "Uranus": 12.8286,  "Neptune": 335.7857, "Pluto": 283.6689 },
+    "2020-06-01T12:00:00Z": { "Sun": 71.4507,  "Moon": 192.8870, "Mercury": 94.7008,  "Venus": 74.9961,  "Mars": 343.0299, "Jupiter": 296.7375, "Saturn": 301.5934, "Uranus": 38.5850,  "Neptune": 350.8326, "Pluto": 294.6845 },
+    "2025-01-15T12:00:00Z": { "Sun": 295.5890, "Moon": 134.6883, "Mercury": 280.3256, "Venus": 342.6581, "Mars": 116.4542, "Jupiter": 71.9495,  "Saturn": 345.7525, "Uranus": 53.3621,  "Neptune": 357.5536, "Pluto": 301.5222 }
+  }
+}

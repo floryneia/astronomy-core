@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "generated": "2026-07-31",
+    "reference": "Swiss Ephemeris 2.10.03 (pyswisseph), swe.TRUE_NODE",
+    "implementation": "astronomy-engine v2.1.19, orbital mechanics: L = r × v, n = K × L",
+    "body": "TrueNorthNode (SE_TRUE_NODE / swe.TRUE_NODE)",
+    "coordinate_system": "geocentric ecliptic, tropical (no ayanamsa), J2000.0",
+    "algorithm": "Instantaneous orbital plane from Moon position+velocity via finite difference (dt=1min). Angular momentum L = r × v in ecliptic Cartesian. Ascending node direction n = K × L where K = (0,0,1). Longitude = atan2(Lx, -Ly).",
+    "acceptance_criteria": {
+      "all_individual_errors_deg": 0.5,
+      "mean_error_deg": 0.1,
+      "max_error_deg": 0.3
+    }
+  },
+  "statistics": {
+    "n": 25,
+    "mean_error_deg": 0.0029,
+    "max_error_deg": 0.0071,
+    "min_error_deg": 0.0001,
+    "std_dev_deg": 0.0020,
+    "pass_count": 25,
+    "warn_count": 0,
+    "fail_count": 0,
+    "pass_rate_pct": 100
+  },
+  "verdict": "PASS",
+  "measurements": [
+    {"date": "1990-01-01T12:00:00Z", "ae_lon": 316.8675, "se_lon": 316.8687, "error": 0.0012},
+    {"date": "1990-06-15T12:00:00Z", "ae_lon": 308.1215, "se_lon": 308.1199, "error": 0.0016},
+    {"date": "1991-03-20T12:00:00Z", "ae_lon": 295.7427, "se_lon": 295.7445, "error": 0.0018},
+    {"date": "1993-07-04T12:00:00Z", "ae_lon": 251.9761, "se_lon": 251.9792, "error": 0.0031},
+    {"date": "1995-01-01T12:00:00Z", "ae_lon": 223.2157, "se_lon": 223.2160, "error": 0.0003},
+    {"date": "1997-09-01T12:00:00Z", "ae_lon": 169.7018, "se_lon": 169.7054, "error": 0.0036},
+    {"date": "2000-01-01T12:00:00Z", "ae_lon": 123.9521, "se_lon": 123.9529, "error": 0.0008},
+    {"date": "2000-06-21T12:00:00Z", "ae_lon": 114.7126, "se_lon": 114.7089, "error": 0.0037},
+    {"date": "2001-12-31T12:00:00Z", "ae_lon": 87.1808, "se_lon": 87.1809, "error": 0.0001},
+    {"date": "2003-03-20T12:00:00Z", "ae_lon": 61.3295, "se_lon": 61.3342, "error": 0.0047},
+    {"date": "2005-06-29T12:00:00Z", "ae_lon": 19.4597, "se_lon": 19.4589, "error": 0.0008},
+    {"date": "2007-01-15T12:00:00Z", "ae_lon": 347.6303, "se_lon": 347.6310, "error": 0.0007},
+    {"date": "2009-08-01T12:00:00Z", "ae_lon": 300.2235, "se_lon": 300.2276, "error": 0.0041},
+    {"date": "2010-01-01T12:00:00Z", "ae_lon": 291.0781, "se_lon": 291.0818, "error": 0.0037},
+    {"date": "2011-11-25T12:00:00Z", "ae_lon": 254.2509, "se_lon": 254.2568, "error": 0.0059},
+    {"date": "2013-05-10T12:00:00Z", "ae_lon": 226.8651, "se_lon": 226.8645, "error": 0.0006},
+    {"date": "2015-06-01T12:00:00Z", "ae_lon": 188.1535, "se_lon": 188.1499, "error": 0.0036},
+    {"date": "2016-02-29T12:00:00Z", "ae_lon": 171.8349, "se_lon": 171.8412, "error": 0.0063},
+    {"date": "2018-04-15T12:00:00Z", "ae_lon": 132.0953, "se_lon": 132.0981, "error": 0.0028},
+    {"date": "2020-01-01T12:00:00Z", "ae_lon": 98.3855, "se_lon": 98.3828, "error": 0.0027},
+    {"date": "2020-11-13T12:00:00Z", "ae_lon": 80.1728, "se_lon": 80.1799, "error": 0.0071},
+    {"date": "2021-07-04T12:00:00Z", "ae_lon": 70.4284, "se_lon": 70.4343, "error": 0.0059},
+    {"date": "2023-03-01T12:00:00Z", "ae_lon": 35.8078, "se_lon": 35.8075, "error": 0.0003},
+    {"date": "2024-06-01T12:00:00Z", "ae_lon": 14.0464, "se_lon": 14.0496, "error": 0.0032},
+    {"date": "2025-01-15T12:00:00Z", "ae_lon": 359.3570, "se_lon": 359.3608, "error": 0.0038}
+  ],
+  "notes": [
+    "25/25 dates within ±0.01° of Swiss Ephemeris",
+    "Previous approach (SearchMoonNode event-based): mean 0.29°, max 1.07°, 20/25 pass",
+    "Current approach (instantaneous orbital plane): mean 0.003°, max 0.007°, 25/25 pass",
+    "Remaining ~0.007° residual: finite difference approximation (dt=1min) + ephemeris precision"
+  ]
+}
