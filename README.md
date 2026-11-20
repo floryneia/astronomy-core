@@ -1,5 +1,8 @@
 # astronomy-core
 
+[![CI](https://github.com/floryneia/astronomy-core/actions/workflows/ci.yml/badge.svg)](https://github.com/floryneia/astronomy-core/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/astronomy-core)](https://www.npmjs.com/package/astronomy-core)
+
 Provider-pattern TypeScript library for precise celestial body calculations — planetary positions, Placidus house cusps, astrocartography coordinates, apparent disk data, and more.
 
 Built as the calculation engine inside a production astrology SaaS. Zero astrological logic — pure geometry and ephemeris math.

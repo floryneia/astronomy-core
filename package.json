@@ -29,6 +29,16 @@
     "astrocartography"
   ],
   "license": "MIT",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/floryneia/astronomy-core.git"
+  },
+  "homepage": "https://github.com/floryneia/astronomy-core#readme",
   "dependencies": {
     "astronomy-engine": "^2.1.0"
   },
